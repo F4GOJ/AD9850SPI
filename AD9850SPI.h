@@ -57,4 +57,7 @@ class AD9850SPI
 	void pulse(int pin);
 	double calibFreq;
 };
+
+extern AD9850SPI dds;
+
 #endif

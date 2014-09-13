@@ -33,7 +33,7 @@
 #include <AD9850SPI.h>
 #include <SPI.h>
 
-AD9850::AD9850(int w_clk, int fq_ud, int reset) {
+AD9850SPI::AD9850SPI(int w_clk, int fq_ud, int reset) {
 	W_CLK = w_clk;
 	FQ_UD = fq_ud;
 	RESET = reset;
@@ -42,11 +42,11 @@ AD9850::AD9850(int w_clk, int fq_ud, int reset) {
 	calibFreq = 125000000;
 }
 
-void AD9850::begin() {
+void AD9850SPI::begin() {
 	begin_priv();
 }
 
-void AD9850::begin_priv() {
+void AD9850SPI::begin_priv() {
 	pinMode(W_CLK, OUTPUT);
 	pinMode(FQ_UD, OUTPUT);
 	pinMode(RESET, OUTPUT);
@@ -60,7 +60,7 @@ void AD9850::begin_priv() {
 	pulse(FQ_UD);
 }
 
-void AD9850::update() {
+void AD9850SPI::update() {
 
 	for (int i=0; i<4; i++, deltaphase>>=8) {
 		SPI.transfer(deltaphase & 0xFF);
@@ -70,32 +70,32 @@ void AD9850::update() {
 }
 
 
-void AD9850::setfreq(double f, uint8_t p) {
+void AD9850SPI::setfreq(double f, uint8_t p) {
 	deltaphase = f * 4294967296.0 / calibFreq;
 	phase = p << 3;
 	update();
 }
 
 
-void AD9850::down() {
+void AD9850SPI::down() {
 	pulse(FQ_UD);
 	SPI.transfer(0x04);
 	pulse(FQ_UD);
 }
     
 
-void AD9850::up() {
+void AD9850SPI::up() {
 	update();
 }
 
 
-void AD9850::calibrate(double TrimFreq)
+void AD9850SPI::calibrate(double TrimFreq)
 {
 	calibFreq = TrimFreq;
 }
 
 
-void AD9850::pulse(int pin) {
+void AD9850SPI::pulse(int pin) {
 	digitalWrite(pin, HIGH);
 	digitalWrite(pin, LOW);
 }

@@ -35,10 +35,10 @@
 #define AD9850SPI_H
 #include <Arduino.h>
 
-class AD9850
+class AD9850SPI
 {
 	public:
-  	AD9850(int w_clk, int fq_ud, int reset);
+  	AD9850SPI(int w_clk, int fq_ud, int reset);
 
 	void begin();
 	void setfreq(double f, uint8_t p);

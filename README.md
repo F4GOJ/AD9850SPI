@@ -1,5 +1,6 @@
 Arduino library for AD9850
 Created 23/08/2014 by Christophe Caiveau f4goj@free.fr
+
 Upgrade to SPI Anthony f4goh@orange.fr
 
 This library uses the Serial Peripheral Interface (SPI) to accelerate the update of the AD9850 from 700µs in software serial to 90µs (54µs for the deltaphase calculation and 36µs for the transfert)

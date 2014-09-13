@@ -22,7 +22,7 @@ To use the **AD9850SPI** library:
 To use the **AD9850SPI** library, the SPI library must also be included.
 ```c++
 #include <AD9850SPI.h>    //http://github.com/f4goj/AD9850
-#include <SPI.h>         //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
+#include <SPI.h>          //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
 ```
 ##### Hardware connections : #####
 

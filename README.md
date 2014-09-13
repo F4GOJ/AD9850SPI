@@ -26,18 +26,20 @@ To use the **AD9850SPI** library, the SPI library must also be included.
 #include <AD9850SPI.h>    //http://github.com/f4goj/AD9850
 #include <SPI.h>          //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
 ```
-##### Hardware connections : #####
+## Hardware connections : ##
 
 - W_CLK -> D13 arduino UNO/NANO, D52 MEGA
 - FQ_UD -> any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
 - DATA/D7 -> D11 arduino UNO/NANO, D51 MEGA
 - RESET -> any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
 
-##### Instance : #####
+## Instance : ##
 
-AD9850SPI dds(W_CLK pin, FQ_UD pin, RESET pin);
+###AD9850SPI name_of_the_instance(W_CLK pin, FQ_UD pin, RESET pin);
+######Description
 
-##### Functions : #####
+
+## Functions : ##
 
 - dds.begin(); Initialize the output pins and master reset the AD9850
 - dds.calibrate(frequency); Compensation of crystal oscillator frequency
@@ -45,3 +47,30 @@ AD9850SPI dds(W_CLK pin, FQ_UD pin, RESET pin);
 - dds.down(); power down mode reducing the dissipated power from 380mW to 30mW @5V
 - dds.up(); wake-up the AD9850
 
+###get(void)
+#####Description
+Reads the current date and time from the RTC and returns it as a *time_t* value. Returns zero if an I2C error occurs (RTC not present, etc.).
+#####Syntax
+`RTC.get();`
+#####Parameters
+None.
+#####Returns
+Current date and time *(time_t)*
+#####Example
+```c++
+#include <AD9850SPI.h>
+#include <SPI.h>
+
+AD9850 dds(13, 8, 9);
+
+void setup(){
+ dds.begin();
+}
+
+void loop(){
+ dds.setfreq(14070000.0, 0);
+ delay(5000);
+ dds.down();
+ delay(5000);
+}
+```

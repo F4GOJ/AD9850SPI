@@ -35,9 +35,17 @@ To use the **AD9850SPI** library, the SPI library must also be included.
 
 ## Instance : ##
 
-###AD9850SPI name_of_the_instance(W_CLK pin, FQ_UD pin, RESET pin);
+###
 ######Description
-
+Create an instance of the object AD9850SPI
+#####Syntax
+`AD9850SPI name_of_the_instance(W_CLK pin, FQ_UD pin, RESET pin);`
+#####Parameters
+**name_of_the_instance :**  
+#####Returns
+None.
+#####Example
+`AD9850SPI dds(13, 8, 9);`
 
 ## Functions : ##
 

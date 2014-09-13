@@ -14,6 +14,18 @@ To use the **AD9850** library:
 - Rename the folder to just **AD9850**.
 - Copy the renamed folder to the Arduino sketchbook\libraries folder.
 
+
+## Usage notes ##
+
+When using the **AD9850** library, the user is responsible for ensuring that reads and writes do not exceed the device's address space (0x00-0x12 for DS3231, 0x00-0xFF for DS3232); no bounds checking is done by the library.            
+
+Similar to the **DS1307RTC** library, the **DS3232RTC** library instantiates an RTC object; the user does not need to do this.
+
+To use the **AD9850SPI** library, the Wire library must also be included.
+```c++
+#include <AD9850SPI.h>    //http://github.com/f4goj/AD9850
+#include <Wire.h>         //http://arduino.cc/en/Reference/Wire (included with Arduino IDE)
+```
 ##### Hardware connections : #####
 
 - W_CLK -> D13 arduino UNO/NANO, D52 MEGA

@@ -38,9 +38,9 @@
 class AD9850SPI
 {
 	public:
-  	AD9850SPI(int w_clk, int fq_ud, int reset);
+  	AD9850SPI();
 
-	void begin();
+	void begin(int w_clk, int fq_ud, int reset);
 	void setfreq(double f, uint8_t p);
 	void down();
 	void up();
@@ -58,6 +58,6 @@ class AD9850SPI
 	double calibFreq;
 };
 
-extern AD9850SPI dds;
+extern AD9850SPI DDS;
 
 #endif

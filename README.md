@@ -36,27 +36,7 @@ To use the **AD9850SPI** library, the SPI library must also be included.
 - DATA/D7 -> D11 arduino UNO/NANO, D51 MEGA
 - RESET -> any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
 
-## Instance : ##
-
-###
-######Description
-Create an instance of the object AD9850SPI
-#####Syntax
-`AD9850SPI name_of_the_instance();`
-#####Parameters
-**name_of_the_instance :**  
-#####Returns
-None.
-#####Example
-`AD9850SPI dds(13, 8, 9);`
-
 ## Functions : ##
-
-- dds.begin(); 
-- dds.calibrate(frequency); Compensation of crystal oscillator frequency
-- dds.setfreq(frequency,phase); frequency in Hz, phase coded on 5 bits
-- dds.down(); power down mode reducing the dissipated power from 380mW to 30mW @5V
-- dds.up(); wake-up the AD9850
 
 ###begin(int w_clk_pin, int fq_ud_pin, int reset_pin)
 #####Description
@@ -75,3 +55,72 @@ void setup(){
  DDS.begin(13, 8, 9);
 }
 ```
+###calibrate(double trim_frequency)
+#####Description
+Compensation of crystal oscillator frequency.<br>
+Can be used at any time after initialization.
+#####Syntax
+`DDS.calibrate(trim_freq);`
+#####Parameters
+**trim_freq :** Adjust around 125000000 to match the real crystal oscillator frequency. *(double)*
+#####Returns
+None.
+#####Example
+```c++
+void setup(){
+ DDS.begin(13, 8, 9);
+}
+
+void loop(){
+ DDS.calibrate(124999000);
+}
+```
+###setfreq(double frequency, int phase)
+#####Description
+Sets the output frequency of the AD9850 and the phase of the signal.
+#####Syntax
+`DDS.setfreq(frequency, phase);`
+#####Parameters
+**frequency :** Output frequency in Hz. *(double)*<br>
+**phase :** Sets the phase of the output signal, coded on 5 bits allows 32 phase steps of 11,25° each. *(int)*
+#####Returns
+None.
+#####Example
+```c++
+double frequency = 10000000;
+int phase = 0;
+DDS.setfreq(frequency, phase);
+```
+###down()
+#####Description
+Power down mode reducing the dissipated power from 380mW to 30mW @5V
+#####Syntax
+`DDS.down();`
+#####Parameters
+None.
+#####Returns
+None.
+#####Example
+```c++
+DDS.down();
+```
+###up()
+#####Description
+Wakes-up the AD9850 from power down mode.
+#####Syntax
+`DDD.up();`
+#####Parameters
+None.
+#####Returns
+None.
+#####Example
+```c++
+DDS.down(); // Entering power down mode
+
+// some code doing something
+
+...
+
+DDS.up(); // WAKE-UP !!! :)
+```
+

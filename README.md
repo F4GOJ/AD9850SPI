@@ -11,6 +11,8 @@ AD9850 datasheet at http://www.analog.com/static/imported-files/data_sheets/AD98
 
 Use this library freely.
 
+![ad9850_connections](https://cloud.githubusercontent.com/assets/8761871/4262821/f5b7d230-3bba-11e4-85c7-4f8bd9ee7161.png)
+
 ## Installation ##
 To use the **AD9850SPI** library:  
 - Go to https://github.com/F4GOJ/AD9850SPI, click the [Download ZIP](https://github.com/F4GOJ/AD9850SPI/archive/master.zip) button and save the ZIP file to a convenient location on your PC.

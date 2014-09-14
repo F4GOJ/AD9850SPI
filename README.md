@@ -65,7 +65,9 @@ Initialize the output pins and master reset the AD9850
 `DDS.begin(w_clk, fq_ud, reset);`
 #####Parameters
 **w_clk :** MOSI output pin (13 on a UNO/NANO, 52 on a MEGA).
+
 **fq_ud :** Frequency update pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA.
+
 **reset :** Reset output pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA.
 #####Returns
 None.

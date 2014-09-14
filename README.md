@@ -1,9 +1,9 @@
 # Arduino SPI library for AD9850 #
-Christophe Caiveau f4goj@free.fr
+F4GOJ Christophe f4goj@free.fr
 
 August 2014
 
-Upgrade to SPI Anthony f4goh@orange.fr
+Upgrade to SPI F4GOH Anthony f4goh@orange.fr
 
 This library uses the Serial Peripheral Interface (SPI) to accelerate the update of the AD9850 from 700µs in software serial to 90µs (54µs for the deltaphase calculation and 36µs for the transfert)
 
@@ -13,7 +13,7 @@ Use this library freely.
 
 ## Installation ##
 To use the **AD9850SPI** library:  
-- Go to https://github.com/f4goj/AD9850SPI, click the [Download ZIP](https://github.com/f4goj/AD9850SPI/archive/master.zip) button and save the ZIP file to a convenient location on your PC.
+- Go to https://github.com/F4GOJ/AD9850SPI, click the [Download ZIP](https://github.com/F4GOJ/AD9850SPI/archive/master.zip) button and save the ZIP file to a convenient location on your PC.
 - Uncompress the downloaded file.  This will result in a folder containing all the files for the library, that has a name that includes the branch name, usually **AD9850SPI-master**.
 - Rename the folder to  **AD9850SPI**.
 - Copy the renamed folder to the Arduino sketchbook\libraries folder.
@@ -26,7 +26,7 @@ The **AD9850SPI** library instantiates a **DDS** object, the user does not need 
 To use the **AD9850SPI** library, the SPI library must also be included.
 
 ```c++
-#include <AD9850SPI.h>    //http://github.com/f4goj/AD9850SPI
+#include <AD9850SPI.h>    //http://github.com/F4GOJ/AD9850SPI
 #include <SPI.h>          //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
 ```
 ## Hardware connections : ##

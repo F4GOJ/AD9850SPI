@@ -26,8 +26,8 @@ The **AD9850SPI** library instantiates a **DDS** object, the user does not need 
 To use the **AD9850SPI** library, the SPI library must also be included.
 
 ```c++
-#include <AD9850SPI.h>    //http://github.com/F4GOJ/AD9850SPI
-#include <SPI.h>          //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
+#include <AD9850SPI.h> //http://github.com/F4GOJ/AD9850SPI
+#include <SPI.h>       //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
 ```
 ## Hardware connections : ##
 

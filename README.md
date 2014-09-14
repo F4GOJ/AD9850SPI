@@ -108,7 +108,7 @@ DDS.down();
 #####Description
 Wakes-up the AD9850 from power down mode.
 #####Syntax
-`DDD.up();`
+`DDS.up();`
 #####Parameters
 None.
 #####Returns

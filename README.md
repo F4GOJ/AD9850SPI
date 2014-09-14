@@ -42,7 +42,7 @@ To use the **AD9850SPI** library, the SPI library must also be included.
 ######Description
 Create an instance of the object AD9850SPI
 #####Syntax
-`AD9850SPI name_of_the_instance(W_CLK pin, FQ_UD pin, RESET pin);`
+`AD9850SPI name_of_the_instance();`
 #####Parameters
 **name_of_the_instance :**  
 #####Returns
@@ -52,36 +52,26 @@ None.
 
 ## Functions : ##
 
-- dds.begin(); Initialize the output pins and master reset the AD9850
+- dds.begin(); 
 - dds.calibrate(frequency); Compensation of crystal oscillator frequency
 - dds.setfreq(frequency,phase); frequency in Hz, phase coded on 5 bits
 - dds.down(); power down mode reducing the dissipated power from 380mW to 30mW @5V
 - dds.up(); wake-up the AD9850
 
-###get(void)
+###begin(int w_clk_pin, int fq_ud_pin, int reset_pin)
 #####Description
-Reads the current date and time from the RTC and returns it as a *time_t* value. Returns zero if an I2C error occurs (RTC not present, etc.).
+Initialize the output pins and master reset the AD9850
 #####Syntax
-`RTC.get();`
+`DDS.begin(w_clk, fq_ud, reset);`
 #####Parameters
-None.
+**w_clk :** MOSI output pin (13 on a UNO/NANO, 52 on a MEGA)
+**fq_ud :** Frequency update pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
+**reset :** Reset output pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
 #####Returns
-Current date and time *(time_t)*
+None.
 #####Example
 ```c++
-#include <AD9850SPI.h>
-#include <SPI.h>
-
-AD9850 dds(13, 8, 9);
-
 void setup(){
- dds.begin();
-}
-
-void loop(){
- dds.setfreq(14070000.0, 0);
- delay(5000);
- dds.down();
- delay(5000);
+ DDS.begin(13, 8, 9);
 }
 ```

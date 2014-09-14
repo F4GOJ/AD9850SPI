@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For AD9850
+# Syntax Coloring Map For AD9850SPI
 #######################################
 #######################################
 # Datatypes (KEYWORD1)

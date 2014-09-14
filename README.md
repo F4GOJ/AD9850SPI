@@ -21,12 +21,12 @@ To use the **AD9850SPI** library:
 
 ## Usage notes ##
 
-Similar to the **RTC** library, the **AD9850SPI** library instantiates a **DDS** object; the user does not need to do this.
+The **AD9850SPI** library instantiates a **DDS** object, the user does not need to do this.
 
 To use the **AD9850SPI** library, the SPI library must also be included.
 
 ```c++
-#include <AD9850SPI.h>    //http://github.com/f4goj/AD9850
+#include <AD9850SPI.h>    //http://github.com/f4goj/AD9850SPI
 #include <SPI.h>          //http://arduino.cc/en/Reference/SPI (included with Arduino IDE)
 ```
 ## Hardware connections : ##

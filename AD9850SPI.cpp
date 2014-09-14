@@ -33,16 +33,19 @@
 #include <AD9850SPI.h>
 #include <SPI.h>
 
-AD9850SPI::AD9850SPI(int w_clk, int fq_ud, int reset) {
+AD9850SPI DDS;
+
+AD9850SPI::AD9850SPI() {
+	SPI.begin();
+}
+
+void AD9850SPI::begin(int w_clk, int fq_ud, int reset) {
 	W_CLK = w_clk;
 	FQ_UD = fq_ud;
 	RESET = reset;
 	deltaphase = 0;
 	phase = 0;
 	calibFreq = 125000000;
-}
-
-void AD9850SPI::begin() {
 	begin_priv();
 }
 
@@ -50,7 +53,7 @@ void AD9850SPI::begin_priv() {
 	pinMode(W_CLK, OUTPUT);
 	pinMode(FQ_UD, OUTPUT);
 	pinMode(RESET, OUTPUT);
-	SPI.begin();
+	
 	SPI.setClockDivider(SPI_CLOCK_DIV4);
 	SPI.setBitOrder(LSBFIRST);
 	SPI.setDataMode(SPI_MODE0);

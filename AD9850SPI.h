@@ -17,7 +17,7 @@
  * RESET   -> any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
  *
  * Functions :
- * DDS.begin(); Initialize the output pins and master reset the AD9850 
+ * DDS.begin(W_CLK pin, FQ_UD pin, RESET pin); Initialize the output pins and master reset the AD9850 
  * DDS.calibrate(frequency); Compensation of crystal oscillator frequency
  * DDS.setfreq(frequency,phase); frequency in Hz, phase coded on 5 bits
  * DDS.down(); power down mode reducing the dissipated power from 380mW to 30mW @5V

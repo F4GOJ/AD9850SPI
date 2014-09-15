@@ -70,7 +70,7 @@ void AD9850SPI::update() {
 }
 
 
-void AD9850SPI::setfreq(long f, uint8_t p) {
+void AD9850SPI::setfreq(double f, uint8_t p) {
 	deltaphase = f * 4294967296.0 / calibFreq;
 	phase = p << 3;
 	update();
@@ -89,7 +89,7 @@ void AD9850SPI::up() {
 }
 
 
-void AD9850SPI::calibrate(long TrimFreq)
+void AD9850SPI::calibrate(double TrimFreq)
 {
 	calibFreq = TrimFreq;
 }

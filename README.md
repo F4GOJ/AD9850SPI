@@ -57,14 +57,14 @@ void setup(){
  DDS.begin(13, 8, 9);
 }
 ```
-###calibrate(long trim_frequency)
+###calibrate(double trim_frequency)
 #####Description
 Compensation of crystal oscillator frequency.<br>
 Can be used at any time after initialization.
 #####Syntax
 `DDS.calibrate(trim_freq);`
 #####Parameters
-**trim_freq :** Adjust around 125000000 to match the real crystal oscillator frequency. *(long)*
+**trim_freq :** Adjust around 125000000 to match the real crystal oscillator frequency. *(double)*
 #####Returns
 None.
 #####Example
@@ -77,13 +77,13 @@ void loop(){
  DDS.calibrate(124999000);
 }
 ```
-###setfreq(long frequency, int phase)
+###setfreq(double frequency, int phase)
 #####Description
 Sets the output frequency of the AD9850 and the phase of the signal.
 #####Syntax
 `DDS.setfreq(frequency, phase);`
 #####Parameters
-**frequency :** Output frequency in Hz. *(long)*<br>
+**frequency :** Output frequency in Hz. *(double)*<br>
 **phase :** Sets the phase of the output signal, coded on 5 bits allows 32 phase steps of 11,25° each. *(int)*
 #####Returns
 None.

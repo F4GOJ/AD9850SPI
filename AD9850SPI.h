@@ -38,10 +38,10 @@ class AD9850SPI
   	AD9850SPI();
 
 	void begin(int w_clk, int fq_ud, int reset);
-	void setfreq(long f, uint8_t p);
+	void setfreq(double f, uint8_t p);
 	void down();
 	void up();
-	void calibrate(long TrimFreq);
+	void calibrate(double TrimFreq);
 	
 	private:
 	int W_CLK;
@@ -52,7 +52,7 @@ class AD9850SPI
 	void update();
 	void begin_priv();
 	void pulse(int pin);
-	long calibFreq;
+	double calibFreq;
 };
 
 extern AD9850SPI DDS;

@@ -64,7 +64,7 @@ Peut être utilisée à n'importe quel moment après l'initialisation.
 #####Syntaxe
 `DDS.calibrate(trim_freq);`
 #####Paramètres
-**trim_freq :** Ajuster autour de 125000000 pour correspondre à la fréquence réellede l'oscillateur. *(double)*
+**trim_freq :** Ajuster autour de 125000000 pour correspondre à la fréquence réelle de l'oscillateur. *(double)*
 #####Retourne
 Rien.
 #####Exemple

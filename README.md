@@ -95,7 +95,7 @@ DDS.setfreq(frequency, phase);
 ```
 ###down()
 #####Description
-Power down mode reducing the dissipated power from 380mW to 30mW @5V
+Power down mode reducing the dissipated power from 380mW to 30mW at 5V
 #####Syntax
 `DDS.down();`
 #####Parameters

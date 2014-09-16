@@ -33,10 +33,10 @@ Pour utiliser la librairie **AD9850SPI**, la librairie SPI doit être aussi incl
 
 ![ad9850_connections](https://raw.githubusercontent.com/F4GOJ/images/master/AD9850_connections.png)
 
-- W_CLK   -> 13 arduino UNO/NANO, D52 MEGA.
-- FQ_UD   -> n'importe quelle broche exceptées les 10 et 12 sur un UNO/NANO, 50 et 53 sur un MEGA.
+- W_CLK -> 13 arduino UNO/NANO, D52 MEGA.
+- FQ_UD -> n'importe quelle broche exceptées les 10 et 12 sur un UNO/NANO, 50 et 53 sur un MEGA.
 - DATA/D7 -> 11 arduino UNO/NANO, D51 MEGA.
-- RESET   -> n'importe quelle broche exceptées les 10 et 12 sur un UNO/NANO, 50 et 53 sur un MEGA.
+- RESET -> n'importe quelle broche exceptées les 10 et 12 sur un UNO/NANO, 50 et 53 sur un MEGA.
 
 ## Fonctions : ##
 

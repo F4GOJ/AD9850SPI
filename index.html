@@ -63,12 +63,14 @@
 
 <p>To use the <strong>AD9850SPI</strong> library, the SPI library must also be included.</p>
 
-<div class="highlight highlight-c++"><pre><span class="cp">#include &lt;AD9850SPI.h&gt;    </span><span class="c1">//http://github.com/F4GOJ/AD9850SPI</span>
-<span class="cp">#include &lt;SPI.h&gt;          </span><span class="c1">//http://arduino.cc/en/Reference/SPI (included with Arduino IDE)</span>
+<div class="highlight highlight-c++"><pre><span class="cp">#include &lt;AD9850SPI.h&gt; </span><span class="c1">//http://github.com/F4GOJ/AD9850SPI</span>
+<span class="cp">#include &lt;SPI.h&gt;       </span><span class="c1">//http://arduino.cc/en/Reference/SPI (included with Arduino IDE)</span>
 </pre></div>
 
 <h2>
 <a name="hardware-connections-" class="anchor" href="#hardware-connections-"><span class="octicon octicon-link"></span></a>Hardware connections :</h2>
+
+<p><img src="https://raw.githubusercontent.com/F4GOJ/AD9850SPI/master/images/AD9850.png" alt="ad9850"></p>
 
 <ul>
 <li>W_CLK -&gt; D13 arduino UNO/NANO, D52 MEGA</li>
@@ -94,7 +96,7 @@
 <h5>
 <a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h5>
 
-<p><strong>w_clk :</strong> MOSI output pin (13 on a UNO/NANO, 52 on a MEGA) <em>(int)</em><br><strong>fq_ud :</strong> Frequency update pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA. <em>(int)</em><br><strong>reset :</strong> Reset output pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA. <em>(int)</em></p>
+<p><strong>w_clk :</strong> SPI SCK output pin (13 on a UNO/NANO, 52 on a MEGA) <em>(int)</em><br><strong>fq_ud :</strong> Frequency update pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA. <em>(int)</em><br><strong>reset :</strong> Reset output pin, any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA. <em>(int)</em></p>
 
 <h5>
 <a name="returns" class="anchor" href="#returns"><span class="octicon octicon-link"></span></a>Returns</h5>
@@ -182,7 +184,7 @@ Can be used at any time after initialization.</p>
 <h5>
 <a name="description-3" class="anchor" href="#description-3"><span class="octicon octicon-link"></span></a>Description</h5>
 
-<p>Power down mode reducing the dissipated power from 380mW to 30mW <a href="https://github.com/5V" class="user-mention">@5V</a></p>
+<p>Power down mode reducing the dissipated power from 380mW to 30mW at 5V</p>
 
 <h5>
 <a name="syntax-3" class="anchor" href="#syntax-3"><span class="octicon octicon-link"></span></a>Syntax</h5>

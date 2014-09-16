@@ -35,24 +35,24 @@
 class AD9850SPI
 {
 	public:
-  	AD9850SPI();
+		AD9850SPI();
 
-	void begin(int w_clk, int fq_ud, int reset);
-	void setfreq(double f, uint8_t p);
-	void down();
-	void up();
-	void calibrate(double TrimFreq);
+		void begin(int w_clk, int fq_ud, int reset);
+		void setfreq(double f, uint8_t p);
+		void down();
+		void up();
+		void calibrate(double TrimFreq);
 	
 	private:
-	int W_CLK;
-	int FQ_UD;
-	int RESET;
-	uint32_t deltaphase;
-	uint8_t phase;
-	void update();
-	void begin_priv();
-	void pulse(int pin);
-	double calibFreq;
+		int W_CLK;
+		int FQ_UD;
+		int RESET;
+		uint32_t deltaphase;
+		uint8_t phase;
+		void update();
+		void begin_priv();
+		void pulse(int pin);
+		double calibFreq;
 };
 
 extern AD9850SPI DDS;

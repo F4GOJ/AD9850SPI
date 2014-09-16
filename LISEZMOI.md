@@ -31,7 +31,7 @@ Pour utiliser la librairie **AD9850SPI**, la librairie SPI doit être aussi incl
 ```
 ## Connexions : ##
 
-![ad9850_connections](https://raw.githubusercontent.com/F4GOJ/images/master/AD9850_connections.png)
+![ad9850](https://raw.githubusercontent.com/F4GOJ/AD9850SPI/master/images/AD9850.png)
 
 - W_CLK   -> 13 arduino UNO/NANO, D52 MEGA.
 - FQ_UD   -> n'importe quelle broche exceptées les 10 et 12 sur un UNO/NANO, 50 et 53 sur un MEGA.

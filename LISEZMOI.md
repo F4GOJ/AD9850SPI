@@ -23,7 +23,7 @@ Pour utiliser la librairie **AD9850SPI** :
 
 La librairie **AD9850SPI** crée une instance de l'objet **DDS**, l'utilisateur n'a pas pas besoin de le faire.
 
-Pour utiliser la librairie **AD9850SPI**, la librairie SPI doit être aussi incluse.
+Pour utiliser la librairie **AD9850SPI**, la librairie SPI doit être incluse.
 
 ```c++
 #include <AD9850SPI.h> //http://github.com/F4GOJ/AD9850SPI

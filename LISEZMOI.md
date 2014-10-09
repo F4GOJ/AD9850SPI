@@ -3,7 +3,7 @@ F4GOJ Christophe f4goj@free.fr
 
 Août 2014
 
-Amélioration vers SPI par F4GOH Anthony f4goh@orange.fr
+Mise à jour vers SPI par F4GOH Anthony f4goh@orange.fr
 
 Cette librairie utilise l'Interface de Périphérique Série (SPI) pour accélérer la mise à jour de l'AD9850 de 700µs par la liaison série logicielle à 90µs (54µs pour le calcul du mot deltaphase et 36µs pour le transfert)
 

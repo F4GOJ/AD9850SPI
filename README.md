@@ -32,7 +32,7 @@ To use the **AD9850SPI** library, the SPI library must also be included.
 ## Hardware connections : ##
 
 ![ad9850](https://raw.githubusercontent.com/F4GOJ/AD9850SPI/master/images/AD9850.png)
-
+![ad9850_2](https://raw.githubusercontent.com/F4GOJ/AD9850SPI/master/images/AD9850_connections_M2.png)
 - W_CLK -> D13 arduino UNO/NANO, D52 MEGA
 - FQ_UD -> any pin except 10 and 12 UNO/NANO, 50 and 53 MEGA
 - DATA/D7 -> D11 arduino UNO/NANO, D51 MEGA

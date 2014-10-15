@@ -54,6 +54,7 @@ class AD9850SPI
 		void update();
 		void begin_priv();
 		void pulse(int pin);
+		void wakeUp();
 		double calibFreq;
 };
 

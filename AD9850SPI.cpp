@@ -94,6 +94,23 @@ void AD9850SPI::calibrate(double TrimFreq)
 	calibFreq = TrimFreq;
 }
 
+void AD9850SPI::powerOn(){
+  pinMode(W_CLK,OUTPUT);
+  delay(100);  
+  wakeup();
+  delay(100);
+}
+
+void AD9850SPI::powerOff(){
+ pinMode(W_CLK,INPUT);
+}
+
+void AD9850SPI::wakeup()
+{
+ pulse(RESET);
+ pulse(W_CLK);
+ pulse(FQ_UD); 
+}
 
 void AD9850SPI::pulse(int pin) {
 	digitalWrite(pin, HIGH);

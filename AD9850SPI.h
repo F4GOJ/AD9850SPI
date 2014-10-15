@@ -42,6 +42,8 @@ class AD9850SPI
 		void down();
 		void up();
 		void calibrate(double TrimFreq);
+		void powerOn();
+		void powerOff();
 	
 	private:
 		int W_CLK;

@@ -95,14 +95,14 @@ void AD9850SPI::calibrate(double TrimFreq)
 }
 
 void AD9850SPI::powerOn(){
-  pinMode(W_CLK,OUTPUT);
+  pinMode(11, OUTPUT);
   delay(100);  
   wakeUp();
   delay(100);
 }
 
 void AD9850SPI::powerOff(){
- pinMode(W_CLK,INPUT);
+ pinMode(11, INPUT);
 }
 
 void AD9850SPI::wakeUp()

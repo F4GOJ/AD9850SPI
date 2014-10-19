@@ -17,7 +17,6 @@ calibrate	KEYWORD2
 setfreq	KEYWORD2
 down	KEYWORD2
 up	KEYWORD2
-ddsPower  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

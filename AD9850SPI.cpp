@@ -99,6 +99,7 @@ void AD9850SPI::powerOn(){
   delay(100);  
   wakeUp();
   delay(100);
+  update();
 }
 
 void AD9850SPI::powerOff(){

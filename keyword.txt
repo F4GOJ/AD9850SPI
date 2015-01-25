@@ -6,7 +6,7 @@
 #######################################
 
 AD9850SPI	KEYWORD1
-DDS KEYWORD1
+DDS	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

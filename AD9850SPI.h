@@ -44,6 +44,7 @@ class AD9850SPI
 		void calibrate(double TrimFreq);
 		void powerOn();
 		void powerOff();
+		void vna(unsigned long DS_FTW, uint8_t Mode);
 	
 	private:
 		int W_CLK;

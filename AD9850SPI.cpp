@@ -117,3 +117,9 @@ void AD9850SPI::pulse(int pin) {
 	digitalWrite(pin, HIGH);
 	digitalWrite(pin, LOW);
 }
+
+void AD9850SPI::vna(unsigned long DS_FTW,uint8_t Mode) {
+ deltaphase=(double) DS_FTW;
+ phase=Mode;
+ update();
+}

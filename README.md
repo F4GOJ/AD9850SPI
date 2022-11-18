@@ -1,4 +1,6 @@
 # Arduino SPI library for AD9850 #
+[![Compile Examples](https://github.com/F4GOJ/AD9850SPI/workflows/Compile%20Examples/badge.svg)](https://github.com/F4GOJ/AD9850SPI/actions?workflow=Compile+Examples)
+
 F4GOJ Christophe f4goj@free.fr
 
 August 2014
